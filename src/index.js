@@ -13,12 +13,13 @@ exports.config = function(options, cwd) {
     isBnbBuild() && this.packCallbacks.push(afterPack);
 };
 
-exports.commands = [
-    {
-        name: 'bnbBuild',
-        module: require('./commands/bnbBuild.js')
-    }
-];
+// 放弃使用自定义命令构建项目
+// exports.commands = [
+//     {
+//         name: 'bnbBuild',
+//         module: require('./commands/bnbBuild.js')
+//     }
+// ];
 
 exports.hooks = {
     beforeCompiling: function(opt, webpackConfig) {
